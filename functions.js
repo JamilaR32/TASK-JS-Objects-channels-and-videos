@@ -70,8 +70,9 @@ console.log(getChannelByName("PowerfulJRE", channels));
  * BONUS: use iteration methods `.find()` and `.some()`
  ****************************************************************/
 function getChannelByVideoTitle(videoTitle, channels) {
-  const matched = channels.videos.some((video) => video.title == videoTitle);
-  return channels.videos.find(matched);
+  return channels.videos.find(
+    channels.videos.some((video) => video.title == videoTitle)
+  );
 
   // return channels.find((x) => x.videos.title == videoTitle);
   // return channels.find((x) => x.videos.some((y) => y.title == videoTitle));
